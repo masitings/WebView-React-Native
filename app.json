@@ -1,0 +1,17 @@
+{
+  "name": "VideoApps",
+  "displayName": "VideoApps",
+  "expo": {
+    "name": "VideoApps",
+    "slug": "VideoApps",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
