@@ -2,6 +2,12 @@ import React, { PropTypes, Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { WebView } from 'react-native-webview';
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+} from 'react-native-admob'
 
 export default class WelcomePage extends Component {
 
@@ -12,7 +18,18 @@ export default class WelcomePage extends Component {
   }
 
   render() {
-    return <WebView source={{ uri: 'https://power.vpnlabs.xyz/landing/ebfed711-70b2-4ef0-aa51-9cb961254bce' }} />;
+    return (
+      <View style={{ flex: 1 }}>
+        <WebView source={{ uri: 'https://reactnative.dev/' }} style={{flex:1}} />
+        <AdMobBanner
+          adSize="smartBannerPortrait"
+          adUnitID="ca-app-pub-3940256099942544/6300978111"
+          testDevices={[AdMobBanner.simulatorId]}
+          onAdFailedToLoad={error => console.error(error)}
+          style={{alignItems: 'center', justifyContent: 'center'}}
+        />
+      </View>
+    );
   }
 }
 
