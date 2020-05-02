@@ -47,4 +47,6 @@ target 'VideoApps' do
 
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
 
+  pod 'react-native-admob', :path => '../node_modules/react-native-admob'
+
 end
