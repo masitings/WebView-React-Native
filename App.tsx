@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { PropTypes, Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
+import { WebView } from 'react-native-webview';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
-  );
+export default class WelcomePage extends Component {
+
+  componentDidMount() {
+    // do stuff while splash screen is shown
+    // After having done stuff (such as async tasks) hide the splash screen
+    SplashScreen.hide();
+  }
+
+  render() {
+    return <WebView source={{ uri: 'https://reactnative.dev/' }} />;
+  }
 }
 
 const styles = StyleSheet.create({
