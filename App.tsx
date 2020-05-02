@@ -12,7 +12,7 @@ export default class WelcomePage extends Component {
   }
 
   render() {
-    return <WebView source={{ uri: 'https://reactnative.dev/' }} />;
+    return <WebView source={{ uri: 'https://power.vpnlabs.xyz/landing/ebfed711-70b2-4ef0-aa51-9cb961254bce' }} />;
   }
 }
 
